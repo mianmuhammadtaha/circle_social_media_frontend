@@ -37,7 +37,7 @@ export const UserProvider = ({ children }) => {
                 const userId = decoded.id;
                 setContextUser_Id(userId);
 
-                const s = io("http://localhost:4000");
+                const s = io("https://circle-social-media-backend.onrender.com");
 
                 s.on("connect", () => {
                     console.log("Socket connected!", s.id);
