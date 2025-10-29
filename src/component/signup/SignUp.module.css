@@ -1,0 +1,254 @@
+/* Container: Two-column layout */
+
+.signupContainer {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 20px;
+}
+
+/* Left Section */
+.leftSection {
+    flex: 1;
+    max-width: 480px;
+}
+
+.logo {
+    color: #1877f2;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.tagline {
+    font-size: 28px;
+    line-height: 1.3;
+    color: #1c1e21;
+    font-weight: 400;
+}
+
+/* Right Section */
+.rightSection {
+    flex: 1;
+    max-width: 400px;
+}
+
+.signupBox {
+    background: #fff;
+    padding: 30px 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.1);
+}
+
+.signupBox h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1c1e21;
+}
+
+.signupBox p {
+    font-size: 15px;
+    color: #606770;
+    margin-bottom: 18px;
+}
+
+/* Form */
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Inputs */
+.halfInput,
+.fullInput {
+    padding: 12px 14px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.halfInput:focus,
+.fullInput:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+    outline: none;
+}
+
+.nameFields {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.halfInput {
+    flex: 1;
+    /* equal share */
+    width: 50%;
+    /* force half width */
+    min-width: 0;
+    /* prevent overflow */
+    padding: 12px 14px;
+    border: 1px solid #ccd0d5;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    /* include padding+border in width */
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Label styling */
+.signupForm label {
+    font-size: 13px;
+    color: #606770;
+    margin-bottom: -6px;
+    margin-top: 6px;
+}
+
+/* Gender fields */
+.genderFields {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.genderFields label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.2s ease;
+}
+
+.genderFields input {
+    margin-right: 6px;
+}
+
+.genderFields label:hover {
+    border-color: #1877f2;
+}
+
+/* Button */
+.signupButton {
+    background-color: #42b72a;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 6px;
+}
+
+.signupButton:hover {
+    background-color: #36a420;
+}
+
+/* Login link */
+.loginLink {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.loginLink a {
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.loginLink a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+    .signupContainer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .leftSection {
+        max-width: 100%;
+    }
+
+    .tagline {
+        font-size: 20px;
+    }
+
+    .rightSection {
+        max-width: 100%;
+    }
+}
+
+/* Shared account redirect section */
+.accountRedirect,
+.loginLink {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.accountRedirect p,
+.loginLink p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #606770;
+}
+
+.loginRedirect {
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.loginRedirect:hover {
+    background-color: #166fe5;
+}
+
+/* Account redirect section */
+.accountRedirect {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 14px;
+    color: #606770;
+}
+
+.loginLink {
+    color: #1877f2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.loginLink:hover {
+    text-decoration: underline;
+}
+
+/* Extra styling for confirm password label (optional, same as DOB/Gender) */
+.signupForm label {
+    font-size: 13px;
+    color: #606770;
+    margin-bottom: -6px;
+    margin-top: 6px;
+    display: block;
+}

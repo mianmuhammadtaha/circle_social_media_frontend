@@ -1,0 +1,620 @@
+/* src/home/Home.module.css */
+.container {
+    min-height: 100vh;
+    background: #f5f7f8;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    margin: 0;
+    color: #1877f2;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.searchInput {
+    width: 420px;
+    max-width: 60vw;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e3e6e8;
+    outline: none;
+}
+
+/* Layout */
+.main {
+    display: grid;
+    grid-template-columns: 220px 1fr 320px;
+    gap: 20px;
+    padding: 28px;
+    align-items: start;
+}
+
+/* columns */
+.leftColumn,
+.rightColumn {
+    position: relative;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(11, 28, 39, 0.04);
+}
+
+/* Feed */
+.feed {
+    max-width: 760px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Create Post */
+.createPost {
+    background: #fff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 18px rgba(11, 28, 39, 0.04);
+}
+
+.createHeader {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.avatarSmall {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1877f2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.postForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textarea {
+    min-height: 70px;
+    border-radius: 8px;
+    border: 1px solid #e3e6e8;
+    padding: 10px;
+    resize: vertical;
+}
+
+.postControls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.postButton {
+    background: #2ea44f;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
+.postHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+/* --- Post Header Alignment --- */
+.headerMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+/* Slight space between name/time and button */
+.headerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #1877f2;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.author {
+    font-weight: 600;
+}
+
+.time {
+    font-size: 12px;
+    color: #666;
+}
+
+.postBody {
+    margin: 8px 0 12px;
+    line-height: 1.45;
+}
+
+.postActions button {
+    margin-right: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #444;
+}
+
+/* Suggestions */
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestions li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggLeft {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.suggName {
+    font-weight: 600;
+}
+
+.suggMeta {
+    font-size: 12px;
+    color: #666;
+}
+
+.followBtn {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+/* small lists */
+.shortcutList {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+}
+
+.shortcutList li {
+    margin: 8px 0;
+}
+
+.trending {
+    padding-left: 18px;
+    margin: 8px 0 0;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .main {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .leftColumn,
+    .rightColumn {
+        display: none;
+    }
+
+    .searchInput {
+        width: 60vw;
+    }
+}
+
+
+
+.postImage {
+    width: 100%;
+    max-height: 300px;
+    /* ek uniform height rakh lo */
+    object-fit: contain;
+    /* image poori visible rahegi */
+    border-radius: 10px;
+    margin-top: 10px;
+    background: whitesmoke;
+    /* optional: black background, empty space ka look better ho jata hai */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.postCard {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 🔹 sab cards same width */
+    width: 100%;
+    min-height: 300px;
+    /* ek base height sab ke liye */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.postHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.headerInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerInfo h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 12px;
+    color: gray;
+}
+
+/* --- Post Actions --- */
+.postActions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.actionBtn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+}
+
+.actionBtn:hover {
+    background: #f2f3f5;
+    color: #1877f2;
+}
+
+.actionBtn:active {
+    transform: scale(0.97);
+}
+
+
+.reactionSummary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.leftReaction {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.likeIcons {
+    font-size: 16px;
+}
+
+.likeCount {
+    font-weight: 500;
+}
+
+.rightReaction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.commentCount,
+.shareCount {
+    font-weight: 500;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 0 0 5px 0;
+}
+
+.postActions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.actionBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.actionBtn:hover {
+    color: #1877f2;
+    /* Facebook blue */
+}
+
+.actionIcon {
+    font-size: 18px;
+}
+
+.actionText {
+    font-weight: 500;
+}
+
+
+.commentSection {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.commentInput {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.commentBox {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.commentButton {
+    padding: 6px 12px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.commentItem {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.commentAvatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.commentContent p {
+    margin: 0;
+}
+
+.commentHeader {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.commentTime {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.replyButton {
+    background: none;
+    border: none;
+    color: gray;
+    cursor: pointer;
+    margin-top: 4px;
+    font-size: 0.9rem;
+}
+
+.replyInput {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 6px;
+    gap: 5px;
+}
+
+.repliesList {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.replyItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.commentAvatarSmall {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.replyContent {
+    background: #f2f2f2;
+    padding: 8px 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+/* Scrollable comment list */
+.commentsListScrollable {
+    max-height: 300px;
+    /* height of comment box */
+    overflow-y: auto;
+    /* enable vertical scroll */
+    padding-right: 10px;
+    /* optional padding so scrollbar doesn't cover text */
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+/* add to Home.module.css */
+.loader {
+    text-align: center;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.endMessage {
+    text-align: center;
+    padding: 14px;
+    color: #666;
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 14px;
+    color: #666;
+}
+
+/* ============================= */
+/* 💙 Follow Button (Modern FB/IG Style) */
+/* ============================= */
+
+.followBtn {
+    background-color: #1877f2;
+    /* same Facebook blue */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(24, 119, 242, 0.25);
+}
+
+/* Hover — slightly darker blue */
+.followBtn:hover {
+    background-color: #166fe5;
+    transform: scale(1.05);
+}
+
+/* Active click effect */
+.followBtn:active {
+    transform: scale(0.97);
+}
+
+/* 💙 When already following */
+.following {
+    background-color: #fff;
+    color: #1877f2;
+    border: 1.8px solid #1877f2;
+    box-shadow: none;
+}
+
+/* Hover “Unfollow” look (like Instagram) */
+.following:hover {
+    background-color: rgba(24, 119, 242, 0.08);
+    color: #e63946;
+    /* red for unfollow hover */
+    border-color: #e63946;
+    transform: scale(1.05);
+}
+
+/* 🔹 Responsive */
+@media (max-width: 600px) {
+    .followBtn {
+        font-size: 13px;
+        padding: 5px 12px;
+    }
+}

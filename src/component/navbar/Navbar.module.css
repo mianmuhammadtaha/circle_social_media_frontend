@@ -1,0 +1,267 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+}
+
+.leftNav .logo a {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0073e6;
+  transition: color 0.3s ease;
+}
+
+.leftNav .logo a:hover {
+  color: #005bb5;
+}
+
+.centerNav {
+  flex: 1;
+  text-align: center;
+}
+
+.searchBox {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 14px;
+  border-radius: 24px;
+  border: 1px solid #dcdcdc;
+  background-color: #fafafa;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.searchBox:focus {
+  border-color: #0073e6;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 115, 230, 0.2);
+  outline: none;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.iconLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f3f7ff;
+  color: #0073e6;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.iconLink:hover {
+  background-color: #0073e6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #f44336;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.profileBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 20px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profileBox:hover {
+  background-color: #f3f7ff;
+  box-shadow: 0 0 6px rgba(0, 115, 230, 0.1);
+}
+
+.profileImg {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0073e6;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  white-space: nowrap;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hamburger:hover {
+  color: #0073e6;
+  transform: scale(1.1);
+}
+
+/* Dropdowns */
+.dropdown, .notificationDropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 0.25s ease;
+  padding: 8px 0;
+}
+
+.dropdownItem {
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  width: 100%;
+}
+
+.dropdownItem:hover {
+  background: #f2f6ff;
+  color: #0073e6;
+}
+
+.notificationWrapper {
+  position: relative;
+}
+
+.notificationDropdown {
+  width: 300px;
+  padding: 12px;
+}
+
+.notificationDropdown h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.requestItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.requestAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.requestInfo p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.requestButtons {
+  display: flex;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.acceptBtn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.acceptBtn:hover {
+  background-color: #45a049;
+}
+
+.rejectBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.rejectBtn:hover {
+  background-color: #e53935;
+}
+
+.noRequests {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .searchBox { width: 70%; }
+}
+
+@media (max-width: 768px) {
+  .centerNav { display: none; }
+  .username { display: none; }
+  .rightNav { gap: 12px; }
+}
