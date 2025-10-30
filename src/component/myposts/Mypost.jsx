@@ -12,7 +12,7 @@ import DeleteModal from "../modal/deleteModal/DeleteModal";
 import EditModal from "../modal/editModal/EditModal";
 
 
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect("https://circle-social-media-backend.onrender.com");
 
 // helper function for "time ago"
 function formatTimeAgo(dateString) {
@@ -382,7 +382,7 @@ const MyPost = () => {
                       post.user_id?.profileImg
                         ? post.user_id.profileImg.startsWith("http")
                           ? post.user_id.profileImg
-                          : `http://localhost:4000/${post.user_id.profileImg.replace(/\\/g, "/")}`
+                          : `https://circle-social-media-backend.onrender.com/${post.user_id.profileImg.replace(/\\/g, "/")}`
                         : "https://via.placeholder.com/150"
                     }
                     alt="profile"
@@ -437,7 +437,7 @@ const MyPost = () => {
                     src={
                       post.filepath.startsWith("http")
                         ? post.filepath
-                        : `http://localhost:4000/${post.filepath.replace(/\\/g, "/")}`
+                        : `https://circle-social-media-backend.onrender.com/${post.filepath.replace(/\\/g, "/")}`
                     }
                     alt="post"
                     className={styles.postImage}
@@ -513,7 +513,7 @@ const MyPost = () => {
                                 cmt.user_id?.profileImg
                                   ? cmt.user_id.profileImg.startsWith("http")
                                     ? cmt.user_id.profileImg
-                                    : `http://localhost:4000/${cmt.user_id.profileImg.replace(/\\/g, "/")}`
+                                    : `https://circle-social-media-backend.onrender.com/${cmt.user_id.profileImg.replace(/\\/g, "/")}`
                                   : "https://via.placeholder.com/40"
                               }
                               alt="profile"
@@ -569,7 +569,7 @@ const MyPost = () => {
                                           rep.user_id?.profileImg
                                             ? rep.user_id.profileImg.startsWith("http")
                                               ? rep.user_id.profileImg
-                                              : `http://localhost:4000/${rep.user_id.profileImg.replace(/\\/g, "/")}`
+                                              : `https://circle-social-media-backend.onrender.com/${rep.user_id.profileImg.replace(/\\/g, "/")}`
                                             : "https://via.placeholder.com/30"
                                         }
                                         alt="reply"

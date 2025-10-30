@@ -41,7 +41,7 @@ const EditModal = ({ isOpen, onClose, postData, fetchPosts }) => {
             if (postData.filepath.startsWith("http")) {
                 imageUrl = postData.filepath;
             } else {
-                imageUrl = `http://localhost:4000/${postData.filepath.replace(/\\/g, "/")}`;
+                imageUrl = `https://circle-social-media-backend.onrender.com/${postData.filepath.replace(/\\/g, "/")}`;
             }
             setPreviewImage(imageUrl);
         } else {

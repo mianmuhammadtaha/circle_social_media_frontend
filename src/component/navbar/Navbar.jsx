@@ -78,7 +78,7 @@ const Navbar = () => {
       profileImg = credentials.profileImg.replace("/upload/", "/upload/w_60,h_60,c_fill,q_auto/");
     } else {
       const fixedPath = credentials.profileImg.replace(/\\/g, "/").replace(/^\//, "");
-      profileImg = `http://localhost:4000/${fixedPath}?t=${Date.now()}`;
+      profileImg = `https://circle-social-media-backend.onrender.com/${fixedPath}?t=${Date.now()}`;
     }
   }
 
@@ -135,7 +135,7 @@ const Navbar = () => {
                         req.user_id?.profileImg
                           ? req.user_id.profileImg.startsWith("http")
                             ? req.user_id.profileImg
-                            : `http://localhost:4000/${req.user_id.profileImg.replace(/\\/g, "/")}`
+                            : `https://circle-social-media-backend.onrender.com/${req.user_id.profileImg.replace(/\\/g, "/")}`
                           : "https://via.placeholder.com/40"
                       }
                       alt="user"

@@ -42,7 +42,7 @@ const Profile = () => {
         } else {
           // old local image fallback
           const fixedPath = credentials.profileImg.replace(/\\/g, "/").replace(/^\//, "");
-          setPreview(`http://localhost:4000/${fixedPath}?t=${Date.now()}`);
+          setPreview(`https://circle-social-media-backend.onrender.com/${fixedPath}?t=${Date.now()}`);
         }
       } else {
         setPreview("https://via.placeholder.com/150");
